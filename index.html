@@ -24,7 +24,20 @@ body{
   box-sizing:border-box;
 }
 
+.disco::before{
+  content:"";
+  position:absolute;
+  width:2px;
+  height:35px;
+  background:#d9d9d9;
+  top:-35px;
+  left:50%;
+  transform:translateX(-50%);
+}
+
 .disco{
+  position:relative;
+}.disco{
   width:120px;
   height:120px;
   margin:25px auto;
@@ -73,7 +86,22 @@ p{
   color:#ffffff;
   text-shadow:0 0 15px silver;
 }
-</style>
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(255,255,255,.12), transparent 45%),
+    radial-gradient(circle at 20% 30%, rgba(0,140,255,.10), transparent 35%),
+    radial-gradient(circle at 80% 30%, rgba(255,255,255,.08), transparent 35%);
+  pointer-events:none;
+  animation:fondoLuz 8s ease-in-out infinite alternate;
+}
+
+@keyframes fondoLuz{
+  from{opacity:.6;}
+  to{opacity:1;}
+}</style>
 </head>
 
 <body>
@@ -82,15 +110,46 @@ p{
 
 <div class="disco"></div>
 
-<h1>✨ Una noche inolvidable está por comenzar ✨</h1>
+<h1>Una noche inolvidable</h1>
 
-<p>
-Con mucha alegría te invito a celebrar conmigo este momento tan especial.
+<p style="color:#d7d7d7;font-size:18px;margin-top:-10px;">
+La cuenta regresiva ha comenzado
 </p>
 
-<h2 class="brillo">Mis XV años</h2>
+<p>
+Con gran alegría te invito a compartir una de las noches más importantes de mi vida.
+</p>
 
-<h2>Jehu Josafat Lozada Salvador</h2>
+<h2 class="brillo" style="font-size:42px;letter-spacing:4px;">
+XV AÑOS
+</h2>
+.nombre{
+  font-size:34px;
+  color:white;
+  text-shadow:0 0 12px rgba(255,255,255,.5);
+  margin-bottom:25px;
+}
+<h2 class="nombre">Jehu Josafat Lozada Salvador</h2>
+.familia{
+  width:90%;
+  max-width:500px;
+  margin:30px auto;
+  padding:20px;
+  border:1px solid rgba(255,255,255,.25);
+  border-radius:20px;
+  background:rgba(255,255,255,.05);
+  backdrop-filter:blur(4px);
+}
+
+.familia h3{
+  color:#d9d9d9;
+  margin-bottom:10px;
+  letter-spacing:1px;
+}
+
+.familia p{
+  font-size:18px;
+}
 <div class="familia">
   <h3>En compañía de sus padres</h3>
   <p>Israel Lozada Amador<br>
