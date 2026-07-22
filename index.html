@@ -82,7 +82,26 @@ Con mucha alegría te invito a celebrar conmigo este momento tan especial.
 
 <h2>Jehu Josafat Lozada Salvador</h2>
 
-<p class="fecha">29 de agosto de 2026</p>
+<p class="fecha">29 de agosto de 2026</p><div id="contador" style="font-size:22px;color:#ffffff;margin-top:20px;"></div>
+
+<script>
+const fechaEvento = new Date("August 29, 2026 18:00:00").getTime();
+
+const cuenta = setInterval(function(){
+
+let ahora = new Date().getTime();
+let distancia = fechaEvento - ahora;
+
+let dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
+let horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+let minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
+let segundos = Math.floor((distancia % (1000 * 60)) / 1000);
+
+document.getElementById("contador").innerHTML =
+dias + " días " + horas + " horas " + minutos + " minutos " + segundos + " segundos";
+
+},1000);
+</script>
 
 <p>
 Será un honor compartir esta celebración contigo.
