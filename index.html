@@ -25,13 +25,22 @@ body{
 }
 
 .disco{
-  width:100px;
-  height:100px;
-  margin:auto;
+  width:120px;
+  height:120px;
+  margin:25px auto;
   border-radius:50%;
-  background:radial-gradient(circle,#fff,#bfc7d5,#3c4d70);
-  box-shadow:0 0 35px silver;
-  animation:girar 5s linear infinite;
+  background:
+    linear-gradient(90deg,
+      rgba(255,255,255,.15) 0%, rgba(255,255,255,.15) 8%, transparent 8%, transparent 16%),
+    linear-gradient(0deg,
+      rgba(255,255,255,.15) 0%, rgba(255,255,255,.15) 8%, transparent 8%, transparent 16%),
+    radial-gradient(circle at 30% 30%, #ffffff, #d9d9d9 45%, #9fa7b3 70%, #6d7685 100%);
+  background-size:12px 12px,12px 12px,100% 100%;
+  box-shadow:
+    0 0 15px rgba(255,255,255,.8),
+    0 0 35px rgba(180,200,255,.6),
+    0 0 60px rgba(120,150,255,.4);
+  animation:girar 8s linear infinite;
 }
 
 @keyframes girar{
